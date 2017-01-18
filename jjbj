@@ -1,0 +1,9 @@
+  docker run -d \
+    --name jupyter-app \
+    --user root \
+    -e "PASSWORD=$PASS" \
+    -e "VIRTUAL_HOST=ancs.ml,lab.ancs.ml" \
+    -e "LETSENCRYPT_HOST=ancs.ml,lab.ancs.ml" \
+    -e "LETSENCRYPT_EMAIL=ithoaiphuong1987@gmail.com" \
+    jupyter/tensorflow-notebook \
+    start-notebook.sh --NotebookApp.password='sha1:3c730425ad7b:9a0c9162ebe97ae787bdad5611b8d068f0cc7f9f'
